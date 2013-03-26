@@ -14,7 +14,7 @@ chkconfig rabbitmq-server on
 /etc/init.d/rabbitmq-server start
 
 rabbitmqctl add_vhost /sensu
-rabbitmqctl add_user sensu mypass
+rabbitmqctl add_user sensu sensu
 rabbitmqctl set_permissions -p /sensu sensu ".*" ".*" ".*"
 
 yum -y install redis
