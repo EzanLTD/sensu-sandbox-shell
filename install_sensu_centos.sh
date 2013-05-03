@@ -40,6 +40,9 @@ EOM
 # Install Sensu "Omnibus" Package
 yum -y install sensu
 
+# Config file
+cp /etc/sensu/config.json.example /etc/sensu/config.json
+
 # Enable Sensu services
 chkconfig sensu-server on
 chkconfig sensu-api on
